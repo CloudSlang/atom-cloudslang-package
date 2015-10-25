@@ -1,6 +1,6 @@
 {
-  "name": "cloudslang",
-  "version": "0.0.0",
+  "name": "atom-cloudslang-extension",
+  "version": "0.0.1",
   "description": "CloudSlang extension",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
