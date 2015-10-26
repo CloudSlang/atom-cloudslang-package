@@ -100,3 +100,24 @@
               overridable: ${4:true|false}
               system_properties: ${5:system.property.key}
     """
+
+  'output':
+    'prefix': 'output'
+    'body': """
+          - ${1:output name}: ${2:output value}
+    """
+
+  'for':
+    'prefix': 'for'
+    'body': """
+          - ${1:task name}:
+              loop:
+                for: ${2:iteration statement}
+                do:
+                  ${3:executable name}:
+                    - ${4:executable argument}
+                publish:
+                  - ${5:publish name}: ${6:publish value}
+              navigate:
+                ${7:fexecutable result name}: ${8:navigate to}
+    """
