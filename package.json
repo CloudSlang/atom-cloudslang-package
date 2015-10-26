@@ -1,18 +1,11 @@
 {
-  "name": "cloudslang",
-  "main": "./lib/cloudslang",
-  "version": "0.0.0",
+  "name": "atom-cloudslang-extension",
+  "version": "0.0.1",
   "description": "CloudSlang extension",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "cloudslang:toggle"
-  },
-  "repository": "https://github.com/CloudSlang/atom-cloudslang-extension",
-  "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "dependencies": {
-  }
+  "homepage": "http://atom.github.io/cloudslang",
+  "repository": "https://github.com/CloudSlang/atom-cloudslang-extension",
+  "license": "Apache v2.0"
 }
