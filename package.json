@@ -2,10 +2,17 @@
   "name": "atom-cloudslang-extension",
   "version": "0.0.1",
   "description": "CloudSlang extension",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  },
+  "keywords": [
+    "cloudslang",
+    "devops",
+    "orchestration",
+    "language",
+    "grammer"
+  ],
+  "license": "Apache v2.0",
   "homepage": "http://atom.github.io/cloudslang",
   "repository": "https://github.com/CloudSlang/atom-cloudslang-extension",
-  "license": "Apache v2.0"
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  }
 }
