@@ -16,7 +16,9 @@
 ]
 'patterns': [
   {
-    'match': '\\b(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break)(:)(.*)'
+    'match':
+      '\\b(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|
+      operation|action|java_action|async_loop|loop|aggregate|for|break)(:)(.*)'
     'captures':
       '1':
         'name': 'cloudslang.keyword'
