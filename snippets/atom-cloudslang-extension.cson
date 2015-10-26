@@ -85,8 +85,18 @@
     """
 
 
-  'Input':
+  'simple input':
     'prefix': 'input'
     'body': """
           - ${1:input name}: ${2:input value}
+    """
+
+  'input with properties':
+    'prefix': 'input with properties'
+    'body': """
+          - ${1:input name}:
+              required: ${2:true|false}
+              default: ${3:default value}
+              overridable: ${4:true|false}
+              system_properties: ${5:system.property.key}
     """
