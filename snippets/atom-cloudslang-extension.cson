@@ -1,0 +1,92 @@
+########################################################################################################
+#   (c) Copyright 2015 Hewlett-Packard Development Company, L.P.
+#   All rights reserved. This program and the accompanying materials
+#   are made available under the terms of the Apache License v2.0 which accompany this distribution.
+#
+#   The Apache License is available at
+#   http://www.apache.org/licenses/LICENSE-2.0
+########################################################################################################
+
+'.source.sl':
+
+  'Flow':
+    'prefix': 'flow'
+    'body': """
+      ####################################################
+      # ${17:Flow description}
+      #
+      # Inputs:
+      #   - ${5:input name} - ${18:input description}
+      # Outputs:
+      #   - ${14:output name} - ${19:output description}
+      # Results:
+      #   - ${16:result name} - ${20:result description}
+      ####################################################
+
+      namespace: ${1:current.namespace}
+
+      imports:
+        ${2:import name}: ${3:import.namespace}
+
+      flow:
+        name: ${4:flow name}
+
+        inputs:
+          - ${5:input name}: ${6:input value}
+
+        workflow:
+          - ${7:task name}:
+              do:
+                ${8:executable name}:
+                  - ${9:executable argument}
+              publish:
+                - ${10:publish name}: ${11:publish value}
+              navigate:
+                ${12:fexecutable result name}: ${13:navigate to}
+
+        outputs:
+          - ${14:output name}: ${15:output value}
+
+        results:
+          - ${16:result name}
+    """
+
+
+  'Operation':
+    'prefix': 'operation'
+    'body': """
+      ####################################################
+      # ${12:Operation description}
+      #
+      # Inputs:
+      #   - ${5:input name} - ${13:input description}
+      # Outputs:
+      #   - ${8:output name} - ${14:output description}
+      # Results:
+      #   - ${10:result name} - ${15:result description}
+      ####################################################
+
+      namespace: ${1:current.namespace}
+
+      operation:
+        name: ${4:operation name}
+
+        inputs:
+          - ${5:input name}: ${6:input value}
+
+        action:
+          python_script: ${7:python script}
+
+        outputs:
+          - ${8:output name}: ${9:output value}
+
+        results:
+          - ${10:result name}: ${11:result condition}
+    """
+
+
+  'Input':
+    'prefix': 'input'
+    'body': """
+          - ${1:input name}: ${2:input value}
+    """
