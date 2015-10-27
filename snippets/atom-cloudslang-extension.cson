@@ -119,6 +119,12 @@
           ${1:import name}: ${2:import namespace}
     """
 
+  'navigate':
+    'prefix': 'navigate'
+    'body': """
+          ${1:executable result name}: ${2:navigate to}
+    """
+
   'for':
     'prefix': 'for'
     'body': """
