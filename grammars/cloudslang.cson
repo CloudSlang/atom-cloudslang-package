@@ -19,11 +19,11 @@
     'match': '\\b(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName)(:)(.*)'
     'captures':
       '1':
-        'name': 'cloudslang.keyword'
+        'name': 'keyword'
       '2':
-        'name': 'cloudslang.keyword'
+        'name': 'keyword'
       '3':
-        'name': 'string.unquoted.block.yaml'
+        'name': 'string'
   }
   {
     'include': 'source.yaml'
