@@ -16,13 +16,13 @@
 ]
 'patterns': [
   {
-    'match': '\\b(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName)(:)(.*)'
+    'match': '(\\s*)(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName)(:)(.*)'
     'captures':
-      '1':
-        'name': 'keyword'
       '2':
         'name': 'keyword'
       '3':
+        'name': 'keyword'
+      '4':
         'name': 'string'
   }
   {
