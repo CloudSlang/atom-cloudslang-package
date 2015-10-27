@@ -161,8 +161,10 @@
                     - ${4:executable argument}
                 publish:
                   - ${5:publish name}: ${6:publish value}
+                break:
+                  - ${7:result name}
               navigate:
-                ${7:executable result name}: ${8:navigate to}
+                ${8:executable result name}: ${9:navigate to}
     """
 
   'async':
