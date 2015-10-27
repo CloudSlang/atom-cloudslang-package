@@ -15,8 +15,33 @@
   'sl.yaml'
 ]
 'patterns': [
+  # for multi-line string syntax - e.g.:
+  #   keyword: |
+  #   keyword: >
   {
-    'match': '(\\s*)(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName)(:)(.*)'
+    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?(python_script\\s*(:))))\\s*(\\||>)'
+    'beginCaptures':
+      '2':
+        'name': 'punctuation.definition.entry.yaml'
+      '3':
+        'name': 'punctuation.definition.entry.yaml'
+      '5':
+        'name': 'keyword'
+      '6':
+        'name': 'punctuation.separator.key-value.yaml'
+    'end': '^(?!\\1 \\4\\s+)(?=\\s*(-|\\S+\\s*:|#))'
+    'name': 'string.unquoted.block.yaml'
+    'patterns': [
+      {
+        'include': '#erb'
+      }
+    ]
+  }
+  # other than multi-line string syntax - e.g.:
+  #   keyword: str
+  #   keyword: {}
+  {
+    'match': '(\\s*)(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script)(:)(.*)'
     'captures':
       '2':
         'name': 'keyword'
@@ -25,6 +50,7 @@
       '4':
         'name': 'string'
   }
+  # include Yaml grammar rules
   {
     'include': 'source.yaml'
   }
