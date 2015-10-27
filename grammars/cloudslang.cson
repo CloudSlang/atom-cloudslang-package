@@ -31,11 +31,6 @@
         'name': 'punctuation.separator.key-value.yaml'
     'end': '^(?!\\1 \\4\\s+)(?=\\s*(-|\\S+\\s*:|#))'
     'name': 'string.unquoted.block.yaml'
-    'patterns': [
-      {
-        'include': '#erb'
-      }
-    ]
   }
   # other than multi-line string syntax - e.g.:
   #   keyword: str
