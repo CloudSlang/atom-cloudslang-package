@@ -138,6 +138,18 @@
                 ${6:executable result name}: ${7:navigate to}
     """
 
+  'on failure':
+    'prefix': 'on_failure'
+    'body': """
+          - on_failure:
+            - ${1:task name}:
+                do:
+                  ${2:executable name}:
+                    - ${3:executable argument}
+                publish:
+                  - ${4:publish name}: ${5:publish value}
+    """
+
   'for':
     'prefix': 'for'
     'body': """
