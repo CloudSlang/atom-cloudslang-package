@@ -42,7 +42,7 @@
               publish:
                 - ${10:publish name}: ${11:publish value}
               navigate:
-                ${12:fexecutable result name}: ${13:navigate to}
+                ${12:executable result name}: ${13:navigate to}
 
         outputs:
           - ${14:output name}: ${15:output value}
@@ -119,5 +119,22 @@
                 publish:
                   - ${5:publish name}: ${6:publish value}
               navigate:
-                ${7:fexecutable result name}: ${8:navigate to}
+                ${7:executable result name}: ${8:navigate to}
+    """
+
+  'async':
+    'prefix': 'async'
+    'body': """
+          - ${1:task name}:
+              async_loop:
+                for: ${2:iteration statement}
+                do:
+                  ${3:executable name}:
+                    - ${4:executable argument}
+                publish:
+                  - ${5:publish name}: ${6:publish value}
+              aggregate:
+                  - ${7:aggregated publish name}: ${8:aggregated publish value}
+              navigate:
+                ${9:executable result name}: ${10:navigate to}
     """
