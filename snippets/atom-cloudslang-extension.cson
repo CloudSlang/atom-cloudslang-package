@@ -107,6 +107,12 @@
           - ${1:output name}: ${2:output value}
     """
 
+  'publish':
+    'prefix': 'publish'
+    'body': """
+          - ${1:publish name}: ${2:publish value}
+    """
+
   'for':
     'prefix': 'for'
     'body': """
