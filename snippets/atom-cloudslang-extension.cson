@@ -125,6 +125,19 @@
           ${1:executable result name}: ${2:navigate to}
     """
 
+  'task':
+    'prefix': 'task'
+    'body': """
+          - ${1:task name}:
+              do:
+                ${2:executable name}:
+                  - ${3:executable argument}
+              publish:
+                - ${4:publish name}: ${5:publish value}
+              navigate:
+                ${6:executable result name}: ${7:navigate to}
+    """
+
   'for':
     'prefix': 'for'
     'body': """
