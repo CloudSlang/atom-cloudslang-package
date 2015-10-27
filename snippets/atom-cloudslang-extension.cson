@@ -113,6 +113,12 @@
           - ${1:publish name}: ${2:publish value}
     """
 
+  'import':
+    'prefix': 'import'
+    'body': """
+          ${1:import name}: ${2:import namespace}
+    """
+
   'for':
     'prefix': 'for'
     'body': """
