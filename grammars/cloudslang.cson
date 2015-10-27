@@ -32,31 +32,17 @@
     'end': '^(?!\\1 \\4\\s+)(?=\\s*(-|\\S+\\s*:|#))'
     'name': 'string.unquoted.block.yaml'
   }
-  # other than multi-line string syntax - e.g.:
+ # other than multi-line string syntax - e.g.:
   #   keyword: str
   {
-    'begin': '(?:(?:(-\\s*)?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script).*?(:)(?=\\s)))|(-))[ \t]*'
-    'beginCaptures':
-      '1':
-        'name': 'punctuation.definition.entry.yaml'
+    'match': '(\\s*)(namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script)(:)(.*)'
+    'captures':
       '2':
         'name': 'keyword'
       '3':
-        'name': 'punctuation.separator.key-value.yaml'
+        'name': 'keyword'
       '4':
-        'name': 'punctuation.definition.entry.yaml'
-    'end': '$|(?=#)(?!#\\{)'
-    'patterns': [
-      {
-        'name': 'string.unquoted.yaml'
-        'match': '\\!\\s*'
-      }
-      {
-        'name': 'string.unquoted.yaml'
-        'match': '[^"\'#\\n]([^#\\n]|((?<!\\s)#))*'
-      }
-    ]
-    'name': 'string.unquoted.yaml'
+        'name': 'string.unquoted.block.yaml'
   }
   # include Yaml grammar rules
   {
