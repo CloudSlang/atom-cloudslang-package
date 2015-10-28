@@ -116,7 +116,7 @@
   'import':
     'prefix': 'import'
     'body': """
-          ${1:import name}: ${2:import_namespace}
+          ${1:import name}: ${2:import.namespace}
     """
 
   'navigate':
