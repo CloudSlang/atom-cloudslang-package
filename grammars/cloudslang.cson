@@ -19,7 +19,7 @@
   #   keyword: |
   #   keyword: >
   {
-    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script)\\s*(:))))\\s*(\\||>)'
+    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script|on_failure)\\s*(:))))\\s*(\\||>)'
     'beginCaptures':
       '5':
         'name': 'keyword'
@@ -29,12 +29,16 @@
   # other than multi-line string syntax - e.g.:
   #   keyword: str
   {
-    'match': '(\\s*)((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script)(:))(.*)'
+    'match': '(\\s*)(-\\s*)?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script|on_failure)(:))([^#\\n]*)(#.*)?\\n'
     'captures':
       '2':
-        'name': 'keyword'
-      '5':
         'name': 'string.unquoted.block.yaml'
+      '3':
+        'name': 'keyword'
+      '6':
+        'name': 'string.unquoted.block.yaml'
+      '7':
+        'name': 'comment'
   }
   # include Yaml grammar rules
   {
