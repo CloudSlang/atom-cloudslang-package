@@ -92,6 +92,12 @@
             methodName: ${2:java_method_name}
     """
 
+  'python action':
+    'prefix': 'python action'
+    'body': """
+          python_script: ${1:python_script}
+    """
+
 
   'simple input':
     'prefix': 'input'
