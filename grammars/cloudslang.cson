@@ -15,6 +15,28 @@
   'sl.yaml'
 ]
 'patterns': [
+  # for multi-line string syntax - e.g.:
+  #   keyword: |
+  #   keyword: >
+  {
+    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script)\\s*(:))))\\s*(\\||>)'
+    'beginCaptures':
+      '5':
+        'name': 'keyword'
+    'end': '^(?!\\1 \\4\\s+)(?=\\s*(-|\\S+\\s*:|#))'
+    'name': 'string.unquoted.block.yaml'
+  }
+  # other than multi-line string syntax - e.g.:
+  #   keyword: str
+  {
+    'match': '(\\s*)((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script)(:))(.*)'
+    'captures':
+      '2':
+        'name': 'keyword'
+      '5':
+        'name': 'string.unquoted.block.yaml'
+  }
+  # include Yaml grammar rules
   {
     'include': 'source.yaml'
   }
