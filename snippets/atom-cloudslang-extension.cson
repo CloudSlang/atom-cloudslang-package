@@ -1,0 +1,185 @@
+########################################################################################################
+#   (c) Copyright 2015 Hewlett-Packard Development Company, L.P.
+#   All rights reserved. This program and the accompanying materials
+#   are made available under the terms of the Apache License v2.0 which accompany this distribution.
+#
+#   The Apache License is available at
+#   http://www.apache.org/licenses/LICENSE-2.0
+########################################################################################################
+
+'.source.sl':
+
+  'Flow':
+    'prefix': 'flow'
+    'body': """
+      ####################################################
+      # ${17:Flow_description}
+      #
+      # Inputs:
+      #   - ${5:input_name} - ${18:input_description}
+      # Outputs:
+      #   - ${14:output_name} - ${19:output_description}
+      # Results:
+      #   - ${16:result_name} - ${20:result_description}
+      ####################################################
+
+      namespace: ${1:current.namespace}
+
+      imports:
+        ${2:import_name}: ${3:import.namespace}
+
+      flow:
+        name: ${4:flow_name}
+
+        inputs:
+          - ${5:input_name}: ${6:input_value}
+
+        workflow:
+          - ${7:task_name}:
+              do:
+                ${8:executable_name}:
+                  - ${9:executable_argument}
+              publish:
+                - ${10:publish_name}: ${11:publish_value}
+              navigate:
+                ${12:executable_result_name}: ${13:navigate_to}
+
+        outputs:
+          - ${14:output_name}: ${15:output_value}
+
+        results:
+          - ${16:result_name}
+    """
+
+
+  'Operation':
+    'prefix': 'operation'
+    'body': """
+      ####################################################
+      # ${12:Operation_description}
+      #
+      # Inputs:
+      #   - ${5:input_name} - ${13:input_description}
+      # Outputs:
+      #   - ${8:output_name} - ${14:output_description}
+      # Results:
+      #   - ${10:result_name} - ${15:result_description}
+      ####################################################
+
+      namespace: ${1:current.namespace}
+
+      operation:
+        name: ${4:operation_name}
+
+        inputs:
+          - ${5:input_name}: ${6:input_value}
+
+        action:
+          python_script: ${7:python_script}
+
+        outputs:
+          - ${8:output_name}: ${9:output_value}
+
+        results:
+          - ${10:result_name}: ${11:result_condition}
+    """
+
+
+  'simple input':
+    'prefix': 'input'
+    'body': """
+          - ${1:input_name}: ${2:input_value}
+    """
+
+  'input with properties':
+    'prefix': 'input with properties'
+    'body': """
+          - ${1:input_name}:
+              required: ${2:true|false}
+              default: ${3:default_value}
+              overridable: ${4:true|false}
+              system_property: ${5:system.property.key}
+    """
+
+  'output':
+    'prefix': 'output'
+    'body': """
+          - ${1:output_name}: ${2:output_value}
+    """
+
+  'publish':
+    'prefix': 'publish'
+    'body': """
+          - ${1:publish_name}: ${2:publish_value}
+    """
+
+  'import':
+    'prefix': 'import'
+    'body': """
+          ${1:import name}: ${2:import.namespace}
+    """
+
+  'navigate':
+    'prefix': 'navigate'
+    'body': """
+          ${1:executable_result_name}: ${2:navigate_to}
+    """
+
+  'task':
+    'prefix': 'task'
+    'body': """
+          - ${1:task_name}:
+              do:
+                ${2:executable_name}:
+                  - ${3:executable_argument}
+              publish:
+                - ${4:publish_name}: ${5:publish_value}
+              navigate:
+                ${6:executable_result_name}: ${7:navigate_to}
+    """
+
+  'on failure':
+    'prefix': 'on_failure'
+    'body': """
+          - on_failure:
+            - ${1:task_name}:
+                do:
+                  ${2:executable_name}:
+                    - ${3:executable_argument}
+                publish:
+                  - ${4:publish_name}: ${5:publish_value}
+    """
+
+  'for':
+    'prefix': 'for'
+    'body': """
+          - ${1:task_name}:
+              loop:
+                for: ${2:iteration_statement}
+                do:
+                  ${3:executable_name}:
+                    - ${4:executable_argument}
+                publish:
+                  - ${5:publish_name}: ${6:publish_value}
+                break:
+                  - ${7:result_name}
+              navigate:
+                ${8:executable_result_name}: ${9:navigate_to}
+    """
+
+  'async':
+    'prefix': 'async'
+    'body': """
+          - ${1:task_name}:
+              async_loop:
+                for: ${2:iteration_statement}
+                do:
+                  ${3:executable_name}:
+                    - ${4:executable_argument}
+                publish:
+                  - ${5:publish_name}: ${6:publish_value}
+              aggregate:
+                  - ${7:aggregated publish_name}: ${8:aggregated publish_value}
+              navigate:
+                ${9:executable_result_name}: ${10:navigate_to}
+    """
