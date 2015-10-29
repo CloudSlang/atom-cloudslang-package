@@ -84,6 +84,14 @@
           - ${10:result_name}: ${11:result_condition}
     """
 
+  'java action':
+    'prefix': 'java action'
+    'body': """
+          java_action:
+            className: ${1:java_class_name}
+            methodName: ${2:java_method_name}
+    """
+
 
   'simple input':
     'prefix': 'input'
