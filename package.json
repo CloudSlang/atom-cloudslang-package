@@ -11,7 +11,7 @@
   ],
   "license": "Apache v2.0",
   "homepage": "http://atom.github.io/language-cloudslang",
-  "repository": "https://github.com/CloudSlang/atom-cloudslang-extension",
+  "repository": "https://github.com/CloudSlang/atom-cloudslang-package",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   }
