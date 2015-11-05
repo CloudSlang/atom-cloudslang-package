@@ -1,5 +1,29 @@
 # atom-cloudslang-extension
 
-Atom package for CloudSlang support
+Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
 
-![A screenshot of your package](https://f.cloud.github.com/assets/69169/2290250/c35d867a-a017-11e3-86be-cd7c5bf3ff9b.gif)
+![logo](http://i.imgur.com/ihI560V.png)
+
+### Install the package:
+
+- using the UI: Settings->Packages
+- with apm: `apm install atom-cloudslang-extension`
+
+### Support is added for:
+
+- syntax highlighting (files with *.sl* extension):
+
+![logo](http://i.imgur.com/Q1E9lys.png)
+
+- snippets (start typing the snippet name, select the appropriate one and press TAB):
+  - flow
+  - operation
+  - inputs (input, input with properties)
+  - output
+  - publish
+  - import
+  - navigate
+  - task
+  - on_failure
+  - for loop (for)
+  - async loop (async)
