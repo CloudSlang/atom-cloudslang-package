@@ -1,4 +1,4 @@
-# atom-cloudslang-extension
+# language-cloudslang
 
 Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
 
@@ -7,7 +7,7 @@ Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
 ### Install the package:
 
 - using the UI: Settings->Packages
-- with apm: `apm install atom-cloudslang-extension`
+- with apm: `apm install language-cloudslang`
 
 ### Support is added for:
 
@@ -18,6 +18,8 @@ Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
 - snippets (start typing the snippet name, select the appropriate one and press TAB):
   - flow
   - operation
+  - java action
+  - python action
   - inputs (input, input with properties)
   - output
   - publish

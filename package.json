@@ -1,25 +1,16 @@
-########################################################################################################
-#   (c) Copyright 2015 Hewlett-Packard Development Company, L.P.
-#   All rights reserved. This program and the accompanying materials
-#   are made available under the terms of the Apache License v2.0 which accompany this distribution.
-#
-#   The Apache License is available at
-#   http://www.apache.org/licenses/LICENSE-2.0
-########################################################################################################
-
 {
-  "name": "atom-cloudslang-extension",
-  "version": "0.0.1",
+  "name": "language-cloudslang",
+  "version": "0.0.0",
   "description": "CloudSlang extension",
   "keywords": [
-    "cloudslang",
+    "automation",
     "devops",
     "orchestration",
     "language",
     "grammer"
   ],
   "license": "Apache v2.0",
-  "homepage": "http://atom.github.io/cloudslang",
+  "homepage": "http://atom.github.io/language-cloudslang",
   "repository": "https://github.com/CloudSlang/atom-cloudslang-extension",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
