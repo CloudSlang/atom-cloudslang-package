@@ -22,7 +22,7 @@ Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
 
 ## Syntax Highlighting
 
-Files saved with *.sl* extension will reflect CloudSlang syntax highlighting.
+Files saved with **.sl** extension will reflect CloudSlang syntax highlighting.
 
 ![logo](http://i.imgur.com/Q1E9lys.png)
 
