@@ -45,3 +45,20 @@
     'include': 'source.yaml'
   }
 ]
+'repository':
+  'line_comments':
+    'begin': '(^[ \\t]+)?(?=#)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.cloudslang'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': '#'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.cloudslang'
+        'end': '\\n'
+        'name': 'comment.line.number-sign.cloudslang'
+      }
+    ]
