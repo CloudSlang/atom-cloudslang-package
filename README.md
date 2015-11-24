@@ -2,7 +2,7 @@
 
 Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
 
-![logo](http://i.imgur.com/ihI560V.png)
+![logo](http://i.imgur.com/PSVWgNW.png?1)
 
 ## Download, Install and Configure Atom
 
