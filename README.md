@@ -24,7 +24,7 @@ Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
 
 Files saved with **.sl** extension will reflect CloudSlang syntax highlighting.
 
-![logo](http://i.imgur.com/Q1E9lys.png)
+![logo](http://i.imgur.com/PSVWgNW.png?1)
 
 ## Snippets
 Start typing the snippet name and press tab or enter when it appears on the screen.
