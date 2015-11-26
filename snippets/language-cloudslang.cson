@@ -121,6 +121,12 @@
           - ${1:output_name}: ${2:output_value}
     """
 
+  'result':
+    'prefix': 'result'
+    'body': """
+          - ${1:result_name}: ${2:result_condition}
+    """
+
   'publish':
     'prefix': 'publish'
     'body': """
