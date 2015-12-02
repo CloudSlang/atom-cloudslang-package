@@ -40,6 +40,7 @@ python\_action | template for a Python action
 input | template for simple input name and value
 input with properties | template for an input with all possible properties
 output | template for an output name and value
+result | template for a result name and value
 publish | template for a published variable name and value
 import | template for an import alias name and namespace
 navigate | template for a result mapped to a navigation target
