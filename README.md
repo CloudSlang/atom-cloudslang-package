@@ -48,3 +48,6 @@ task | template for a standard task
 on\_failure | template for an on\_failure task
 for | template for an iterative task
 async | template for an asynchronous task
+
+## Troubleshooting
+For troubleshooting Atom issues, see the Atom [documentation](https://atom.io/docs) and [discussion board](https://discuss.atom.io/).
