@@ -12,12 +12,12 @@ Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
   * From the Atom UI: **File > Settings > Install** and search for language-cloudslang
   * From the command line: `apm install language-cloudslang`
 
-  **Note:** if you are behind a proxy server you may need to configure Atom as
+  **Note:** If you are behind a proxy server you may need to configure Atom as
   described in their [documentation](https://atom.io/docs/v1.1.0/getting-started-installing-atom#setting-up-a-proxy).
 
-3. You may need to restart Atom.
-4. Files with the **.sl** extension will be recognized as CloudSlang
-   files.
+3. Reload (**View > Reload**) or restart Atom.
+4. Files saved with the **.sl** extension will be recognized within Atom as
+   CloudSlang files.
 
 
 ## Syntax Highlighting
