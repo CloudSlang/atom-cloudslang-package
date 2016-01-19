@@ -16,11 +16,14 @@
       ## description: ${17:Flow_description}
       ##
       ## inputs: |
-      ##   - ${5:input_name} - ${18:input_description}
+      ##   - ${5:input_name}: |
+      ##      ${18:input_description}
+      ##      ${18:input_description}
+      ##   - ${5:input_name}: ${13:input_description}
       ## outputs: |
-      ##   - ${14:output_name} - ${19:output_description}
+      ##   - ${14:output_name}: ${19:output_description}
       ## results: |
-      ##   - ${16:result_name} - ${20:result_description}
+      ##   - ${16:result_name}: ${20:result_description}
       ####################################################
 
       namespace: ${1:current.namespace}
@@ -59,11 +62,14 @@
       ## description: ${12:Operation_description}
       ##
       ## inputs: |
-      ##   - ${5:input_name} - ${13:input_description}
+      ##   - ${5:input_name}: |
+      ##      ${18:input_description}
+      ##      ${18:input_description}
+      ##   - ${5:input_name}: ${13:input_description}
       ## outputs: |
-      ##   - ${8:output_name} - ${14:output_description}
+      ##   - ${8:output_name}: ${14:output_description}
       ## results: |
-      ##   - ${10:result_name} - ${15:result_description}
+      ##   - ${10:result_name}: ${15:result_description}
       ####################################################
 
       namespace: ${1:current.namespace}
