@@ -13,14 +13,17 @@
     'prefix': 'flow'
     'body': """
       ####################################################
-      # ${17:Flow_description}
-      #
-      # Inputs:
-      #   - ${5:input_name} - ${18:input_description}
-      # Outputs:
-      #   - ${14:output_name} - ${19:output_description}
-      # Results:
-      #   - ${16:result_name} - ${20:result_description}
+      ## description: ${19:Flow_description}
+      ##
+      ## inputs: |
+      ##   - ${5:input_name}: |
+      ##      ${20:input_description}
+      ##      ${21:input_description}
+      ##   - ${7:input_name}: ${22:input_description}
+      ## outputs: |
+      ##   - ${16:output_name}: ${23:output_description}
+      ## results: |
+      ##   - ${18:result_name}: ${24:result_description}
       ####################################################
 
       namespace: ${1:current.namespace}
@@ -33,22 +36,23 @@
 
         inputs:
           - ${5:input_name}: ${6:input_value}
+          - ${7:input_name}: ${8:input_value}
 
         workflow:
-          - ${7:task_name}:
+          - ${9:task_name}:
               do:
-                ${8:executable_name}:
-                  - ${9:executable_argument}
+                ${10:executable_name}:
+                  - ${11:executable_argument}
               publish:
-                - ${10:publish_name}: ${11:publish_value}
+                - ${12:publish_name}: ${13:publish_value}
               navigate:
-                ${12:executable_result_name}: ${13:navigate_to}
+                ${14:executable_result_name}: ${15:navigate_to}
 
         outputs:
-          - ${14:output_name}: ${15:output_value}
+          - ${16:output_name}: ${17:output_value}
 
         results:
-          - ${16:result_name}
+          - ${18:result_name}
     """
 
 
@@ -56,14 +60,17 @@
     'prefix': 'operation'
     'body': """
       ####################################################
-      # ${12:Operation_description}
-      #
-      # Inputs:
-      #   - ${5:input_name} - ${13:input_description}
-      # Outputs:
-      #   - ${8:output_name} - ${14:output_description}
-      # Results:
-      #   - ${10:result_name} - ${15:result_description}
+      ## description: ${14:Operation_description}
+      ##
+      ## inputs: |
+      ##   - ${5:input_name}: |
+      ##      ${15:input_description}
+      ##      ${16:input_description}
+      ##   - ${7:input_name}: ${17:input_description}
+      ## outputs: |
+      ##   - ${10:output_name}: ${18:output_description}
+      ## results: |
+      ##   - ${12:result_name}: ${19:result_description}
       ####################################################
 
       namespace: ${1:current.namespace}
@@ -73,15 +80,16 @@
 
         inputs:
           - ${5:input_name}: ${6:input_value}
+          - ${7:input_name}: ${8:input_value}
 
         action:
-          python_script: ${7:python_script}
+          python_script: ${9:python_script}
 
         outputs:
-          - ${8:output_name}: ${9:output_value}
+          - ${10:output_name}: ${11:output_value}
 
         results:
-          - ${10:result_name}: ${11:result_condition}
+          - ${12:result_name}: ${13:result_condition}
     """
 
   'java action':
