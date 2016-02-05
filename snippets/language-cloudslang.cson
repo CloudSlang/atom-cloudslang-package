@@ -120,7 +120,6 @@
               required: ${2:true|false}
               default: ${3:default_value}
               overridable: ${4:true|false}
-              system_property: ${5:system.property.key}
     """
 
   'output':
@@ -210,4 +209,19 @@
                   - ${7:aggregated publish_name}: ${8:aggregated publish_value}
               navigate:
                 ${9:executable_result_name}: ${10:navigate_to}
+    """
+
+  'Prop file':
+    'prefix': 'properties'
+    'body': """
+      namespace: ${1:current.namespace}
+
+      properties:
+        ${2:property_key}: ${3:property_value}
+    """
+
+  'Prop entry':
+    'prefix': 'property'
+    'body': """
+        ${1:property_key}: ${2:property_value}
     """
