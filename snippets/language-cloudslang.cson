@@ -13,17 +13,15 @@
     'prefix': 'flow'
     'body': """
       ####################################################
-      ## description: ${19:Flow_description}
-      ##
-      ## inputs: |
-      ##   - ${5:input_name}: |
-      ##      ${20:input_description}
-      ##      ${21:input_description}
-      ##   - ${7:input_name}: ${22:input_description}
-      ## outputs: |
-      ##   - ${16:output_name}: ${23:output_description}
-      ## results: |
-      ##   - ${18:result_name}: ${24:result_description}
+      #!!
+      #! @description: ${19:Flow_description}
+      #!
+      #! @input ${5:input_name}: ${20:input_description}
+      #!                    ${21:input_description}
+      #! @input ${7:input_name}: ${22:input_description}
+      #! @output ${16:output_name}: ${23:output_description}
+      #! @result ${18:result_name}: ${24:result_description}
+      #!!#
       ####################################################
 
       namespace: ${1:current.namespace}
@@ -60,17 +58,15 @@
     'prefix': 'operation'
     'body': """
       ####################################################
-      ## description: ${14:Operation_description}
-      ##
-      ## inputs: |
-      ##   - ${5:input_name}: |
-      ##      ${15:input_description}
-      ##      ${16:input_description}
-      ##   - ${7:input_name}: ${17:input_description}
-      ## outputs: |
-      ##   - ${10:output_name}: ${18:output_description}
-      ## results: |
-      ##   - ${12:result_name}: ${19:result_description}
+      #!!
+      #! @description: ${14:Operation_description}
+      #!
+      #! @input ${5:input_name}: ${15:input_description}
+      #!                    ${16:input_description}
+      #! @input ${7:input_name}: ${17:input_description}
+      #! @output ${10:output_name}: ${18:output_description}
+      #! @result ${12:result_name}: ${19:result_description}
+      #!!#
       ####################################################
 
       namespace: ${1:current.namespace}
