@@ -88,6 +88,36 @@
           - ${12:result_name}: ${13:result_condition}
     """
 
+  '@input tag':
+      'prefix': '@input'
+      'body': """
+            #! @input ${1:input_name}: ${2:input_description}
+      """
+
+  '@description tag':
+      'prefix': '@description'
+      'body': """
+            #! @description ${1:description_name}: ${2:description_description}
+      """
+
+  '@prerequisites tag':
+     'prefix': '@prerequisites'
+     'body': """
+            #! @prerequisites ${1:prerequisites_name}: ${2:prerequisites_description}
+     """
+
+  '@output tag':
+     'prefix': '@output'
+     'body': """
+            #! @output ${1:output_name}: ${2:output_description}
+     """
+
+  '@result tag':
+     'prefix': '@result'
+     'body': """
+            #! @result ${1:result_name}: ${2:result_description}
+     """
+
   'java action':
     'prefix': 'java action'
     'body': """
