@@ -97,13 +97,13 @@
   '@description tag':
       'prefix': '@description'
       'body': """
-            #! @description ${1:description_name}: ${2:description_description}
+            #! @description: ${1:description_description}
       """
 
   '@prerequisites tag':
      'prefix': '@prerequisites'
      'body': """
-            #! @prerequisites ${1:prerequisites_name}: ${2:prerequisites_description}
+            #! @prerequisites: ${1:prerequisites_description}
      """
 
   '@output tag':
