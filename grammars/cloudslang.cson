@@ -15,6 +15,24 @@
   'sl.yaml'
 ]
 'patterns': [
+  # description section line -> @tag: value
+  {
+    'match': '(#!)(\\s*)(@(description|prerequisites):)(.*)'
+    'name': 'comment'
+    'captures':
+      '4':
+        'name': 'underline'
+  }
+  # description section line -> @tag key: value
+  {
+    'match': '(#!)(\\s*)(@(input|output|result))(\\s+)(\\w+:)(.*)'
+    'name': 'comment'
+    'captures':
+      '3':
+        'name': 'underline'
+      '6':
+        'name': 'constant' # not so logical but looks good
+  }
   # for multi-line string syntax - e.g.:
   #   keyword: |
   #   keyword: >
