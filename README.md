@@ -35,6 +35,7 @@ Keyword | Description
 ---|---
 flow | template for a flow file
 operation | template for an operation file
+properties | template for a system properties file
 java\_action | template for a Java action
 python\_action | template for a Python action
 input | template for simple input name and value
@@ -48,6 +49,12 @@ task | template for a standard task
 on\_failure | template for an on\_failure task
 for | template for an iterative task
 async | template for an asynchronous task
+property | template for a system property
+@input | template for input documentation
+@description | template for file description
+@prerequisites | template for prerequisite documentation
+@output | template for output documentation
+@result | template for result documentation
 
 ## Troubleshooting
 For troubleshooting Atom issues, see the Atom [documentation](https://atom.io/docs) and [discussion board](https://discuss.atom.io/).
