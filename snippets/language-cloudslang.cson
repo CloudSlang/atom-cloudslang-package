@@ -44,7 +44,7 @@
               publish:
                 - ${12:publish_name}: ${13:publish_value}
               navigate:
-                ${14:executable_result_name}: ${15:navigate_to}
+                - ${14:executable_result_name}: ${15:navigate_to}
 
         outputs:
           - ${16:output_name}: ${17:output_value}
@@ -175,7 +175,7 @@
   'navigate':
     'prefix': 'navigate'
     'body': """
-          ${1:executable_result_name}: ${2:navigate_to}
+          - ${1:executable_result_name}: ${2:navigate_to}
     """
 
   'task':
@@ -188,7 +188,7 @@
               publish:
                 - ${4:publish_name}: ${5:publish_value}
               navigate:
-                ${6:executable_result_name}: ${7:navigate_to}
+                - ${6:executable_result_name}: ${7:navigate_to}
     """
 
   'on failure':
@@ -217,7 +217,7 @@
                 break:
                   - ${7:result_name}
               navigate:
-                ${8:executable_result_name}: ${9:navigate_to}
+                - ${8:executable_result_name}: ${9:navigate_to}
     """
 
   'async':
@@ -234,7 +234,7 @@
               aggregate:
                   - ${7:aggregated publish_name}: ${8:aggregated publish_value}
               navigate:
-                ${9:executable_result_name}: ${10:navigate_to}
+                - ${9:executable_result_name}: ${10:navigate_to}
     """
 
   'Prop file':
