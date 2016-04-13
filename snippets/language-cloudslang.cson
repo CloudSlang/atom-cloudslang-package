@@ -37,7 +37,7 @@
           - ${7:input_name}: ${8:input_value}
 
         workflow:
-          - ${9:task_name}:
+          - ${9:step_name}:
               do:
                 ${10:executable_name}:
                   - ${11:executable_argument}
@@ -178,10 +178,10 @@
           - ${1:executable_result_name}: ${2:navigate_to}
     """
 
-  'task':
-    'prefix': 'task'
+  'step':
+    'prefix': 'step'
     'body': """
-          - ${1:task_name}:
+          - ${1:step_name}:
               do:
                 ${2:executable_name}:
                   - ${3:executable_argument}
@@ -195,7 +195,7 @@
     'prefix': 'on_failure'
     'body': """
           - on_failure:
-            - ${1:task_name}:
+            - ${1:step_name}:
                 do:
                   ${2:executable_name}:
                     - ${3:executable_argument}
@@ -206,7 +206,7 @@
   'for':
     'prefix': 'for'
     'body': """
-          - ${1:task_name}:
+          - ${1:step_name}:
               loop:
                 for: ${2:iteration_statement}
                 do:
@@ -223,7 +223,7 @@
   'async':
     'prefix': 'async'
     'body': """
-          - ${1:task_name}:
+          - ${1:step_name}:
               async_loop:
                 for: ${2:iteration_statement}
                 do:

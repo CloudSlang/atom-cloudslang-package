@@ -45,10 +45,10 @@ result | template for a result name and value
 publish | template for a published variable name and value
 import | template for an import alias name and namespace
 navigate | template for a result mapped to a navigation target
-task | template for a standard task
-on\_failure | template for an on\_failure task
-for | template for an iterative task
-async | template for an asynchronous task
+step | template for a standard step
+on\_failure | template for an on\_failure step
+for | template for an iterative step
+async | template for an asynchronous step
 property | template for a system property
 @input | template for input documentation
 @description | template for file description
