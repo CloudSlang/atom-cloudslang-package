@@ -15,7 +15,7 @@ Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
   **Note:** If you are behind a proxy server you may need to configure Atom as
   described in their [documentation](https://atom.io/docs/v1.1.0/getting-started-installing-atom#setting-up-a-proxy).
 
-3. Reload (**View > Reload**) or restart Atom.
+3. Restart Atom.
 4. Files saved with the **.sl** extension will be recognized within Atom as
    CloudSlang files.
 
