@@ -33,6 +33,16 @@
       '6':
         'name': 'constant' # not so logical but looks good
   }
+  # description section line -> @tag key
+  {
+    'match': '(#!)(\\s*)(@(input|output|result))(\\s+)(\\w+)'
+    'name': 'comment'
+    'captures':
+      '3':
+        'name': 'underline'
+      '6':
+        'name': 'constant' # not so logical but looks good
+  }
   # for multi-line string syntax - e.g.:
   #   keyword: |
   #   keyword: >
