@@ -243,11 +243,11 @@
       namespace: ${1:current.namespace}
 
       properties:
-        ${2:property_key}: ${3:property_value}
+        - ${2:property_key}: ${3:property_value}
     """
 
   'Prop entry':
     'prefix': 'property'
     'body': """
-        ${1:property_key}: ${2:property_value}
+        - ${1:property_key}: ${2:property_value}
     """
