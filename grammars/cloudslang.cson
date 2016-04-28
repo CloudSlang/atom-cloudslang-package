@@ -47,7 +47,7 @@
   #   keyword: |
   #   keyword: >
   {
-    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script|on_failure|properties)\\s*(:))))\\s*(\\||>)'
+    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script|on_failure|properties|extensions)\\s*(:))))\\s*(\\||>)'
     'beginCaptures':
       '5':
         'name': 'keyword'
@@ -57,7 +57,7 @@
   # other than multi-line string syntax - e.g.:
   #   keyword: str
   {
-    'match': '(\\s*)(-\\s*)?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script|on_failure|properties)(:))([^#\\n]*)(#.*)?\\n'
+    'match': '(\\s*)(-\\s*)?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|action|java_action|async_loop|loop|aggregate|for|break|className|methodName|python_script|on_failure|properties|extensions)(:))([^#\\n]*)(#.*)?\\n'
     'captures':
       '2':
         'name': 'string.unquoted.block.yaml'
