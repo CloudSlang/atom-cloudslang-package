@@ -48,7 +48,7 @@ navigate | template for a result mapped to a navigation target
 step | template for a standard step
 on\_failure | template for an on\_failure step
 for | template for an iterative step
-async | template for an asynchronous step
+parallel\_loop | template for a step of type parallel loop
 property | template for a system property
 @input | template for input documentation
 @description | template for file description
