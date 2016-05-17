@@ -220,11 +220,11 @@
                 - ${8:executable_result_name}: ${9:navigate_to}
     """
 
-  'async':
-    'prefix': 'async'
+  'parallel_loop':
+    'prefix': 'parallel_loop'
     'body': """
           - ${1:step_name}:
-              async_loop:
+              parallel_loop:
                 for: ${2:iteration_statement}
                 do:
                   ${3:executable_name}:
