@@ -78,8 +78,8 @@
           - ${5:input_name}: ${6:input_value}
           - ${7:input_name}: ${8:input_value}
 
-        action:
-          python_script: ${9:python_script}
+        python_action:
+          script: ${9:python_script}
 
         outputs:
           - ${10:output_name}: ${11:output_value}
@@ -129,7 +129,8 @@
   'python action':
     'prefix': 'python action'
     'body': """
-          python_script: ${1:python_script}
+          python_action:
+            script: ${1:python_script}
     """
 
 
