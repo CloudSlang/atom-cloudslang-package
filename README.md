@@ -13,7 +13,7 @@ Atom language support for [CloudSlang](http://www.cloudslang.io/#/).
   * From the command line: `apm install language-cloudslang`
 
   **Note:** If you are behind a proxy server you may need to configure Atom as
-  described in their [documentation](https://atom.io/docs/v1.1.0/getting-started-installing-atom#setting-up-a-proxy).
+  described in their [package manager documentation](https://github.com/atom/apm/blob/master/README.md).
 
 3. Restart Atom.
 4. Files saved with the **.sl** extension will be recognized within Atom as
@@ -48,7 +48,7 @@ navigate | template for a result mapped to a navigation target
 step | template for a standard step
 on\_failure | template for an on\_failure step
 for | template for an iterative step
-async | template for an asynchronous step
+parallel\_loop | template for a step of type parallel loop
 property | template for a system property
 @input | template for input documentation
 @description | template for file description
