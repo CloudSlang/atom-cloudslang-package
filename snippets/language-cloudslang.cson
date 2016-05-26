@@ -230,12 +230,10 @@
                 do:
                   ${3:executable_name}:
                     - ${4:executable_argument}
-                publish:
-                  - ${5:publish_name}: ${6:publish_value}
-              aggregate:
-                  - ${7:aggregated publish_name}: ${8:aggregated publish_value}
+              publish:
+                - ${5:publish_name}: ${6:publish_value}
               navigate:
-                - ${9:executable_result_name}: ${10:navigate_to}
+                - ${7:executable_result_name}: ${8:navigate_to}
     """
 
   'Prop file':
