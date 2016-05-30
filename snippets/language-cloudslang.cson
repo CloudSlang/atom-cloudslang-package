@@ -80,15 +80,15 @@
 
         python_action:
           dependencies:
-              - ${9:first_gav}
-              - ${10:second_gav}
-          script: ${11:python_script}
+              - '${9:group1}:${10:artifact1}:${11:version1}'
+              - '${12:group2}:${13:artifact2}:${14:version2}'
+          script: ${15:python_script}
 
         outputs:
-          - ${12:output_name}: ${13:output_value}
+          - ${16:output_name}: ${17:output_value}
 
         results:
-          - ${14:result_name}: ${15:result_condition}
+          - ${18:result_name}: ${19:result_condition}
     """
 
   '@input tag':
@@ -125,9 +125,9 @@
     'prefix': 'java action'
     'body': """
           java_action:
-            gav: '${1:gav}'
-            class_name: ${2:java_class_name}
-            method_name: ${3:java_method_name}
+            gav: '${1:group}:${2:artifact}:${3:version}'
+            class_name: ${4:java_class_name}
+            method_name: ${5:java_method_name}
     """
 
   'python action':
@@ -135,9 +135,9 @@
     'body': """
           python_action:
             dependencies:
-                - ${1:first_gav}
-                - ${2:second_gav}
-            script: ${3:python_script}
+                - '${1:group1}:${2:artifact1}:${3:version1}'
+                - '${4:group2}:${5:artifact2}:${6:version2}'
+            script: ${7:python_script}
     """
 
 
