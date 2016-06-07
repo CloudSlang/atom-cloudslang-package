@@ -53,7 +53,6 @@
           - ${18:result_name}
     """
 
-
   'Operation':
     'prefix': 'operation'
     'body': """
@@ -133,7 +132,6 @@
             script: ${1:python_script}
     """
 
-
   'simple input':
     'prefix': 'input'
     'body': """
@@ -154,6 +152,14 @@
     'prefix': 'output'
     'body': """
           - ${1:output_name}: ${2:output_value}
+    """
+
+  'output with properties':
+    'prefix': 'output'
+    'body': """
+          - ${1:output_name}:
+              value: ${2:output_value}
+              sensitive: ${3:sensitive_value}
     """
 
   'result':
@@ -250,4 +256,12 @@
     'prefix': 'property'
     'body': """
         - ${1:property_key}: ${2:property_value}
+    """
+
+  'Prop entry with properties':
+    'prefix': 'property'
+    'body': """
+        - ${1:property_key}:
+              value: ${2:property_value}
+              sensitive: ${3:sensitive_value}
     """
