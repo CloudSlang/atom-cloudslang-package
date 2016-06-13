@@ -41,6 +41,7 @@ python\_action | template for a Python action
 input | template for simple input name and value
 input with properties | template for an input with all possible properties
 output | template for an output name and value
+output with properties | template for an output with all possible properties
 result | template for a result name and value
 publish | template for a published variable name and value
 import | template for an import alias name and namespace
@@ -50,6 +51,7 @@ on\_failure | template for an on\_failure step
 for | template for an iterative step
 parallel\_loop | template for a step of type parallel loop
 property | template for a system property
+property with properties | template for a system property with all possible properties
 @input | template for input documentation
 @description | template for file description
 @prerequisites | template for prerequisite documentation
