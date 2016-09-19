@@ -1,5 +1,5 @@
 ########################################################################################################
-#   (c) Copyright 2015 Hewlett-Packard Development Company, L.P.
+#   (c) Copyright 2016 Hewlett-Packard Development Company, L.P.
 #   All rights reserved. This program and the accompanying materials
 #   are made available under the terms of the Apache License v2.0 which accompany this distribution.
 #
@@ -51,6 +51,37 @@
 
         results:
           - ${18:result_name}
+    """
+
+  'Decision':
+    'prefix': 'decision'
+    'body': """
+      ####################################################
+      #!!
+      #! @description: ${11:Operation_description}
+      #!
+      #! @input ${12:input_name}: ${13:input_description}
+      #!                    ${14:input_description}
+      #! @input ${15:input_name}: ${16:input_description}
+      #! @output ${17:output_name}: ${18:output_description}
+      #! @result ${19:result_name}: ${20:result_description}
+      #!!#
+      ####################################################
+
+      namespace: ${1:current.namespace}
+
+      decision:
+        name: ${2:decision_name}
+
+        inputs:
+          - ${3:input_name}: ${4:input_value}
+          - ${5:input_name}: ${6:input_value}
+
+        outputs:
+          - ${7:output_name}: ${8:output_value}
+
+        results:
+          - ${9:result_name}: ${10:result_condition}
     """
 
   'Operation':
