@@ -35,6 +35,7 @@ Keyword | Description
 ---|---
 flow | template for a flow file
 operation | template for an operation file
+decision | template for a decision file
 properties | template for a system properties file
 java\_action | template for a Java action
 python\_action | template for a Python action
