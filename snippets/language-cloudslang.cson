@@ -1,28 +1,36 @@
-########################################################################################################
-#   (c) Copyright 2016 Hewlett-Packard Development Company, L.P.
+#   (c) Copyright 2016-2017 Micro Focus, L.P.
 #   All rights reserved. This program and the accompanying materials
 #   are made available under the terms of the Apache License v2.0 which accompany this distribution.
 #
 #   The Apache License is available at
 #   http://www.apache.org/licenses/LICENSE-2.0
-########################################################################################################
+#
+#   Unless required by applicable law or agreed to in writing, software
+#   distributed under the License is distributed on an "AS IS" BASIS,
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#   See the License for the specific language governing permissions and
+#   limitations under the License.
+#
+########################################################################################################################
 
 '.source.sl':
 
   'Flow':
     'prefix': 'flow'
     'body': """
-      ####################################################
+      ########################################################################################################################
       #!!
       #! @description: ${19:Flow_description}
       #!
       #! @input ${5:input_name}: ${20:input_description}
-      #!                    ${21:input_description}
+      #!                         ${21:input_description}
       #! @input ${7:input_name}: ${22:input_description}
+      #!
       #! @output ${16:output_name}: ${23:output_description}
+      #!
       #! @result ${18:result_name}: ${24:result_description}
       #!!#
-      ####################################################
+      ########################################################################################################################
 
       namespace: ${1:current.namespace}
 
@@ -56,17 +64,19 @@
   'Decision':
     'prefix': 'decision'
     'body': """
-      ####################################################
+      ########################################################################################################################
       #!!
       #! @description: ${11:Operation_description}
       #!
       #! @input ${12:input_name}: ${13:input_description}
-      #!                    ${14:input_description}
+      #!                          ${14:input_description}
       #! @input ${15:input_name}: ${16:input_description}
+      #!
       #! @output ${17:output_name}: ${18:output_description}
+      #!
       #! @result ${19:result_name}: ${20:result_description}
       #!!#
-      ####################################################
+      ########################################################################################################################
 
       namespace: ${1:current.namespace}
 
@@ -84,20 +94,60 @@
           - ${9:result_name}: ${10:result_condition}
     """
 
-  'Operation':
-    'prefix': 'operation'
+  'Java Operation':
+    'prefix': 'java_operation'
     'body': """
-      ####################################################
+      ########################################################################################################################
       #!!
       #! @description: ${14:Operation_description}
       #!
       #! @input ${5:input_name}: ${15:input_description}
-      #!                    ${16:input_description}
+      #!                         ${16:input_description}
       #! @input ${7:input_name}: ${17:input_description}
+      #!
       #! @output ${10:output_name}: ${18:output_description}
+      #!
       #! @result ${12:result_name}: ${19:result_description}
       #!!#
-      ####################################################
+      ########################################################################################################################
+
+      namespace: ${1:current.namespace}
+
+      operation:
+        name: ${4:operation_name}
+
+        inputs:
+          - ${5:input_name}: ${6:input_value}
+          - ${7:input_name}: ${8:input_value}
+
+        java_action:
+          gav: '${9:group}:${10:artifact}:${11:version}'
+          class_name: ${12:java_class_name}
+          method_name: ${13:java_method_name}
+
+        outputs:
+          - ${14:output_name}: ${15:output_value}
+
+        results:
+          - ${16:result_name}: ${17:result_condition}
+    """
+
+  'Python Operation':
+    'prefix': 'python_operation'
+    'body': """
+      ########################################################################################################################
+      #!!
+      #! @description: ${14:Operation_description}
+      #!
+      #! @input ${5:input_name}: ${15:input_description}
+      #!                         ${16:input_description}
+      #! @input ${7:input_name}: ${17:input_description}
+      #!
+      #! @output ${10:output_name}: ${18:output_description}
+      #!
+      #! @result ${12:result_name}: ${19:result_description}
+      #!!#
+      ########################################################################################################################
 
       namespace: ${1:current.namespace}
 
@@ -109,16 +159,14 @@
           - ${7:input_name}: ${8:input_value}
 
         python_action:
-          dependencies:
-              - '${9:group1}:${10:artifact1}:${11:version1}'
-              - '${12:group2}:${13:artifact2}:${14:version2}'
-          script: ${15:python_script}
+          script: |
+            ${9:python_script}
 
         outputs:
-          - ${16:output_name}: ${17:output_value}
+          - ${10:output_name}: ${11:output_value}
 
         results:
-          - ${18:result_name}: ${19:result_condition}
+          - ${12:result_name}: ${13:result_condition}
     """
 
   '@input tag':
