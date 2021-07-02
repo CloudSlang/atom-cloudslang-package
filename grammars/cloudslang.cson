@@ -47,7 +47,7 @@
   #   keyword: |
   #   keyword: >
   {
-    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|decision|python_action|dependencies|java_action|gav|parallel_loop|loop|for|break|class_name|method_name|script|on_failure|properties|extensions)\\s*(:))))\\s*(\\||>)'
+    'begin': '^(\\s*)(?:(-)|(?:(-(\\s*))?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|decision|python_action|dependencies|java_action|gav|parallel_loop|loop|for|break|class_name|method_name|script|on_failure|properties|extensions|run_id)\\s*(:))))\\s*(\\||>)'
     'beginCaptures':
       '5':
         'name': 'keyword'
@@ -57,7 +57,7 @@
   # other than multi-line string syntax - e.g.:
   #   keyword: str
   {
-    'match': '(\\s*)(-\\s*)?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|decision|python_action|dependencies|java_action|gav|parallel_loop|loop|for|break|class_name|method_name|script|on_failure|properties|extensions)(:))([^#\\n]*)(#.*)?\\n'
+    'match': '(\\s*)(-\\s*)?((namespace|imports|flow|name|inputs|workflow|do|publish|navigate|outputs|results|operation|decision|python_action|dependencies|java_action|gav|parallel_loop|loop|for|break|class_name|method_name|script|on_failure|properties|extensions|run_id)(:))([^#\\n]*)(#.*)?\\n'
     'captures':
       '2':
         'name': 'string.unquoted.block.yaml'

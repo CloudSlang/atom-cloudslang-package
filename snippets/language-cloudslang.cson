@@ -303,3 +303,64 @@
               value: ${2:property_value}
               sensitive: ${3:sensitive_value}
     """
+
+  'Run id':
+    'prefix': 'run_id'
+    'body': """
+        ${1:run_id}:
+    """
+  'cs_append':
+      'prefix': 'cs_append'
+      'body': """
+          cs_append(${1:input_1},to_append)
+      """
+  'cs_extract_number':
+      'prefix': 'cs_extract_number'
+      'body': """
+          cs_extract_number(${1:input_1},n_th)
+      """
+  'cs_substring':
+      'prefix': 'cs_substring'
+      'body': """
+          cs_substring(${1:input_1},start_position,optional_end_position)
+      """
+  'cs_to_lower':
+      'prefix': 'cs_to_lower'
+      'body': """
+          cs_to_lower(${1:input_1})
+      """
+  'cs_to_upper':
+      'prefix': 'cs_to_upper'
+      'body': """
+          cs_to_upper(${1:input_1})
+      """
+  'cs_prepend':
+      'prefix': 'cs_prepend'
+      'body': """
+          cs_prepend(${1:input_1},to_prepend)
+      """
+  'cs_regex':
+      'prefix': 'cs_regex'
+      'body': """
+          cs_regex(${1:input_1},regex,optional_split_lines)
+      """
+  'cs_replace':
+      'prefix': 'cs_replace'
+      'body': """
+          cs_replace(${1:input_1},old_value, new_value, count)
+      """
+  'cs_round':
+      'prefix': 'cs_round'
+      'body': """
+          cs_round(${1:input_1})
+      """
+  'cs_xpath_query':
+      'prefix': 'cs_xpath_query'
+      'body': """
+          cs_xpath_query(${1:input_1},xpath)
+      """
+  'cs_json_query':
+      'prefix': 'cs_json_query'
+      'body': """
+          cs_json_query(${1:input_1},json_path)
+      """
