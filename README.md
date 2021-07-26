@@ -56,6 +56,17 @@ property with properties | template for a system property with all possible prop
 @prerequisites | template for prerequisite documentation
 @output | template for output documentation
 @result | template for result documentation
+cs_append | function to append
+cs_extract_number | function to extract the first number.
+cs_substring | function to return substring
+cs_to_lower | function to convert to lower case
+cs_to_upper | function to convert to upper case
+cs_prepend | function to prepend
+cs_regex | function to apply a regular expression on the selected text 
+cs_replace | function to replace
+cs_round | function to round off
+cs_xpath_query | function to apply the XPath expression on the selected XML
+cs_json_query | function to apply a JSON Path expression on the selected text
 
 ## Troubleshooting
 For troubleshooting Atom issues, see the Atom [documentation](https://atom.io/docs) and [discussion board](https://discuss.atom.io/).
